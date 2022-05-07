@@ -15,4 +15,7 @@ export class InventoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  Closed(){
+    console.log("closed")
+  }
 }
