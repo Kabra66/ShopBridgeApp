@@ -1,5 +1,50 @@
 {
-    "Item1":[
-        {"name":"item1"}
+    "Item1":[{
+        "id" : "1",
+        "name" : "Chair",
+        "category" : "Home Appliance",
+        "price": "200",
+        "description":"",
+        "quantity":""
+    },
+    {
+        "id" : "2",
+        "name" : "Utensils",
+        "category" : "Home Appliance",
+        "price": "300",
+        "description":"",
+        "quantity":""
+    },{
+        "id" : "3",
+        "name" : "Keyboard",
+        "category" : "Asset",
+        "price": "100",
+        "description":"",
+        "quantity":""
+    },
+    {
+        "id" : "4",
+        "name" : "Books",
+        "category" : "Study Material",
+        "price": "400",
+        "description":"",
+        "quantity":""
+    },
+    {
+        "id" : "5",
+        "name" : "Table",
+        "category" : "Home Appliance",
+        "price": "800",
+        "description":"",
+        "quantity":""
+    },
+    {
+        "id" : "6",
+        "name" : "Chair",
+        "category" : "Home Appliance",
+        "price": "200",
+        "description":"",
+        "quantity":""
+    }
     ]
 }
