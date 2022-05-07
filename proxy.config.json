@@ -1,0 +1,7 @@
+{
+    "/Kabra66/*":{
+        "target":"https://my-json-server.typicode.com",
+        "secure":true,
+        "changeOrigin": true
+    }
+}
