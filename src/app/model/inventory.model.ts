@@ -1,8 +1,8 @@
-export class InventoryModel{
-    id: number = 0;
-    name: string = '';
-    description: string = '';
-    category: string = '';
-    price: number = 0;
-    quantity: number = 0
+export class InventoryModel {
+    id: number;
+    name: string;
+    description: string;
+    category: string;
+    price: number;
+    quantity: number
 }
