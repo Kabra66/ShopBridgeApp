@@ -14,7 +14,7 @@
         <hr>
     </div>
 </div>
-<div class="row">
+<div style="margin-left: 20px" class="row" *ngIf="loadItems">
         <div class="col-xs-12">
                 <table class="table">
                         <thead class="thead-dark">
@@ -24,9 +24,24 @@
                             <th scope="col">Description</th>
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
+                            <th scope="col">Category</th>
                             <th scope="col">Action</th>
                           </tr>
                         </thead>
+                        <tbody>
+                        <tr *ngFor="let items of inventoryList">
+                            <td>{{ items.id }}</td>
+                            <td>{{ items.name }}</td>
+                            <td>{{ items.description }}</td>
+                            <td>{{ items.price }}</td>
+                            <td>{{ items.quantity }}</td>
+                            <td>{{ items.category }}</td>
+                            <td>
+                                    <button class="btn btn-default" style="margin-right: 10px">Update</button>
+                                    <button class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        </tbody>
                 </table>
         </div>
     </div>
@@ -38,36 +53,73 @@
                 <h3 class="modal-title" style="color: #994d00">Add New Inventory</h3>
             </div>
             <div class="modal-body">
-                <form>
+                <form (ngSubmit)="onSubmit()" #f="ngForm">
+                    <div class="form-group">
                     <label for="name">Name:</label>
                     <br>
-                    <input type="text" name="name" size="50" style="cursor: pointer">
-                    <br>
-                    <br>
+                    <input
+                     type="text" 
+                     name="name" 
+                     size="50" 
+                     style="cursor: pointer"
+                     id="name"
+                     class="form-control"
+                     ngModel
+                     required>
+                    </div>
+                    <div class="form-group">
                     <label for="description">Description:</label>
                     <br>
-                    <textarea name="description" rows="5" cols="55" style="cursor: pointer"></textarea>
-                    <br>
-                    <br>
+                    <textarea name="description"
+                     rows="5"
+                     cols="55" 
+                     style="cursor: pointer"
+                     id="description"
+                     class="form-control"
+                     ngModel
+                     required></textarea>
+                    </div>
+                    <div class="form-group">
                     <label for="price">Price:</label>
                     <br>
-                    <input type="number" name="price" style="cursor: pointer;width:300px">
-                    <br>
-                    <br>
+                    <input type="number" 
+                    name="price" 
+                    style="cursor: pointer;width:300px"
+                    id="price"
+                    class="form-control"
+                    ngModel
+                    required>
+                    </div>
+                    <div class="form-group">
                     <label for="quantity">Quantity In Stock:</label>
                     <br>
-                    <input type="number" name="quantity" style="cursor: pointer;width:300px">
-                    <br>
-                    <br>
+                    <input type="number"
+                     name="quantity" 
+                     style="cursor: pointer;width:300px"
+                     id="quantity"
+                     class="form-control"
+                     ngModel
+                     required>
+                    </div>
+                    <div class="form-group">
                     <label for="category">Category:</label>
                     <br>
-                    <input type="text" name="category" size="50" style="cursor: pointer;">
+                    <input type="text" 
+                    name="category" 
+                    size="50" 
+                    style="cursor: pointer;"
+                    id="category"
+                    class="form-control"
+                    ngModel
+                    required>
+                    </div>
+                    <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" (click)="AddItemToInventoryList()" [disabled]="!f.valid">Add Item</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="Closed()">Close</button>
+                    </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Add Item</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal" (click)="Closed()">Close</button>
-            </div>
+
         </div>
 
     </div>

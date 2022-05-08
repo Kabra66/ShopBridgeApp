@@ -4,31 +4,31 @@
         "name" : "Chair",
         "category" : "Home Appliance",
         "price": "200",
-        "description":"",
-        "quantity":""
+        "description":"NA",
+        "quantity":"5"
     },
     {
         "id" : "2",
         "name" : "Utensils",
         "category" : "Home Appliance",
         "price": "300",
-        "description":"",
-        "quantity":""
+        "description":"NA",
+        "quantity":"1"
     },{
         "id" : "3",
         "name" : "Keyboard",
         "category" : "Asset",
         "price": "100",
-        "description":"",
-        "quantity":""
+        "description":"NA",
+        "quantity":"20"
     },
     {
         "id" : "4",
         "name" : "Books",
         "category" : "Study Material",
         "price": "400",
-        "description":"",
-        "quantity":""
+        "description":"NA",
+        "quantity":"50"
     },
     {
         "id" : "5",
@@ -36,15 +36,15 @@
         "category" : "Home Appliance",
         "price": "800",
         "description":"",
-        "quantity":""
+        "quantity":"10"
     },
     {
         "id" : "6",
-        "name" : "Chair",
-        "category" : "Home Appliance",
+        "name" : "Tshirt",
+        "category" : "Clothes",
         "price": "200",
-        "description":"",
-        "quantity":""
+        "description":"NA",
+        "quantity":"10"
     }
     ]
 }
